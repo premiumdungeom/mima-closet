@@ -1,0 +1,223 @@
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .hero-content h2,
+    .about-hero h1,
+    .contact-hero h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .about-preview .container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .about-image {
+        order: -1;
+    }
+    
+    .hero-content h2,
+    .about-hero h1,
+    .contact-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        background-color: var(--header-bg);
+        padding: 80px 20px 20px;
+        transition: var(--transition);
+        z-index: 99;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .main-nav.active {
+        right: 0;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+    }
+    
+    .main-nav ul li {
+        margin: 15px 0;
+    }
+    
+    .mobile-toggle {
+        display: block;
+        z-index: 100;
+    }
+    
+    .hero-content h2,
+    .about-hero h1,
+    .contact-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-content p,
+    .about-hero p,
+    .contact-hero p {
+        font-size: 1rem;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .newsletter-form input {
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+    
+    .newsletter-form button {
+        border-radius: 4px;
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Fix for top header on mobile */
+    .top-header .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .header-left, .header-right {
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
+    
+    .header-left {
+        justify-content: flex-start;
+    }
+    
+    .header-right {
+        justify-content: flex-end;
+        gap: 15px;
+    }
+    
+    .header-right a {
+        white-space: nowrap;
+        font-size: 0.9rem;
+        padding: 5px 10px;
+        background-color: var(--primary-color);
+        color: white;
+        border-radius: 4px;
+    }
+    
+    .header-right a:hover {
+        background-color: var(--secondary-color);
+    }
+}
+
+@media (max-width: 576px) {
+    .top-header .container {
+        flex-direction: row;
+        gap: 10px;
+    }
+    
+    .hero {
+        height: 60vh;
+    }
+    
+    .hero-content h2,
+    .about-hero h1,
+    .contact-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .products-grid,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .admin-login,
+    .contact-form {
+        padding: 20px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .filter-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .about-hero,
+    .contact-hero {
+        padding: 80px 0;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    /* Mobile-specific header adjustments */
+    .header-right a {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+    
+    #theme-toggle {
+        font-size: 1rem;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .filter-buttons {
+        gap: 10px;
+    }
+    
+    .filter-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .filter-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .filter-btn {
+        width: 200px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .filter-btn:last-child {
+        margin-bottom: 0;
+    }
+}
