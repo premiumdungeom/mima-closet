@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIMA'S PLACE PRODUCTS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Header -->
+    <div class="top-header">
+        <div class="container">
+            <div class="header-left">
+                 <a href="https://www.tiktok.com/@mimanuked001?_t=ZS-8zU50IBZ80G&_r=1"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <div class="header-right">
+                <a href="admin.html"><i class="fas fa-user"></i> Admin Login</a>
+                <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>MIMA'S PLACE</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Products Header -->
+    <section class="products-header">
+        <div class="container">
+            <h2>Our Products</h2>
+            <p>Discover our exclusive collection of boutique fashion</p>
+        </div>
+    </section>
+
+    <!-- Products Filter -->
+    <section class="products-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="bags">Bags</button>
+                <button class="filter-btn" data-filter="dresses">Dresses</button>
+                <button class="filter-btn" data-filter="tops">Tops</button>
+                <button class="filter-btn" data-filter="accessories">Accessories</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Products -->
+    <section class="all-products">
+        <div class="container">
+            <div class="products-grid" id="all-products">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Pagination -->
+    <section class="products-pagination">
+        <div class="container">
+            <div class="pagination">
+                <button class="pagination-btn" id="prev-page">&lt;</button>
+                <div class="page-numbers" id="page-numbers">
+                    <!-- Page numbers will be generated here -->
+                </div>
+                <button class="pagination-btn" id="next-page">&gt;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-col">
+                <h3>MIMA'S PLACE</h3>
+                <p>Your destination for boutique fashion and unique style.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://www.tiktok.com/@mimanuked001?_t=ZS-8zU50IBZ80G&_r=1">Tiktok</a></li>
+                    <li><a href="https://wa.me/2348120531424?text=I'M+FROM+MIMAS+WEB">Contact web Developer</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, City</p>
+                <p><i class="fas fa-phone"></i> +234 806 388 1526</p>
+                <p><i class="fas fa-envelope"></i> Miracleise001@gmail.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Mima's Place. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/pagination.js"></script>
+</body>
+</html>

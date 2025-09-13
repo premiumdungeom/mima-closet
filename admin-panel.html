@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - MIMA'S PLACE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Header -->
+    <div class="top-header">
+        <div class="container">
+            <div class="header-left">
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <div class="header-right">
+                <a href="products.html"><i class="fas fa-shopping-bag"></i> View Products</a>
+                <button id="logout-btn" class="btn logout-btn">Logout</button>
+                <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>MIMA'S PLACE - ADMIN</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Panel -->
+    <section class="admin-panel">
+        <div class="container">
+            <div class="admin-header">
+                <h2>Admin Panel</h2>
+                <div class="admin-actions">
+                    <button id="refresh-btn" class="btn">Refresh Products</button>
+                    <span class="product-count">Total Products: <span id="total-products">0</span></span>
+                </div>
+            </div>
+
+            <!-- Add Product Form -->
+            <div class="product-form">
+                <h3>Add New Product</h3>
+                <form id="product-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="product-name">Product Name *</label>
+                            <input type="text" id="product-name" name="product-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-price">Price (₦) *</label>
+                            <input type="number" id="product-price" name="product-price" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="original-price">Original Price (₦)</label>
+                            <input type="number" id="original-price" name="original-price">
+                        </div>
+                        <div class="form-group">
+                            <label for="product-discount">Discount</label>
+                            <input type="text" id="product-discount" name="product-discount" placeholder="e.g., 17% off">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="product-category">Category *</label>
+                            <select id="product-category" name="product-category" required>
+                                <option value="">Select Category</option>
+                                <option value="bags">Bags</option>
+                                <option value="dresses">Dresses</option>
+                                <option value="tops">Tops</option>
+                                <option value="accessories">Accessories</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-image">Image URL *</label>
+                            <input type="text" id="product-image" name="product-image" required 
+                                   value="https://files.catbox.moe/da5lzg.png" placeholder="Paste image URL here">
+                            <small class="image-hint">Currently using: https://files.catbox.moe/da5lzg.png</small>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="product-description">Description *</label>
+                        <textarea id="product-description" name="product-description" rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="product-soldout" name="product-soldout">
+                                Mark as Sold Out
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn add-product-btn">Add Product</button>
+                </form>
+            </div>
+
+            <!-- Products List -->
+            <div class="current-products-header">
+                <h3>Current Products</h3>
+                <p>All products will appear in their respective categories on the main website</p>
+            </div>
+            
+            <div id="admin-products" class="products-list">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-col">
+                <h3>MIMA'S PLACE ADMIN</h3>
+                <p>Product Management System</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Mima's Place. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/products-data.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
