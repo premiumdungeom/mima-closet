@@ -61,6 +61,7 @@ const Product = mongoose.model('Product', productSchema);
 // Routes
 
 // Get all products with optional pagination
+// Get all products with optional pagination
 app.get('/api/products', async (req, res) => {
   try {
     const page = parseInt(req.query.page) || 1;
@@ -202,4 +203,24 @@ app.get('/api/products/category/:category', async (req, res) => {
     // Apply pagination if limit is provided
     if (limit > 0) {
       const skip = (page - 1) * limit;
-      productsQuer
+      productsQuery = productsQuery.skip(skip).limit(limit);
+    }
+    
+    const products = await productsQuery.exec();
+    const total = await Product.countDocuments(query);
+    
+    res.json({
+      products,
+      total,
+      page,
+      totalPages: limit > 0 ? Math.ceil(total / limit) : 1
+    });
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch products by category' });
+  }
+});
+
+// Start server
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
